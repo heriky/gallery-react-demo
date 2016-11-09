@@ -92,7 +92,7 @@ module.exports = {
 				//loader: ExtractTextPlugin.extract('style','css?modules&localIdentName=[name]__[local]-[hash:base64:5]','postcss','sass?sourceMap')
 			},{
 				test:/\.(png|jpg)$/,
-				loader:'url?limit=40000'	 
+				loader:'url?limit=40000'
 				// url-loader 用来加载图片资源
 				// 省略文字loader，即url-loader简化为url
 				// 也可以将参数写成单独一个项： query:{limit:40000}
@@ -101,6 +101,9 @@ module.exports = {
 				loader:'babel',
 				include:APP_PATH,
 				exclude:/node_modules/,
+			},
+			{
+				test: /\.(woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=50000&name=fonts/[name].[ext]'
 			},
 			//{ test: require.resolve("./src/js/tool/swipe.js"),  loader: "exports?swipe"}
 			//以上配置用于暴露全局变量，例如jQuery等
