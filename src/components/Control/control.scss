@@ -1,0 +1,14 @@
+.ctrl{
+	position:fixed;bottom:50px;left:50%;transform:translateX(-50%);
+	@at-root{
+		.inner{
+			display:inline-block;
+			height:20px;
+			width:20px;
+			border-radius:50%;
+			background:#999;
+			margin-right:10px;
+			cursor:pointer;
+		}
+	}
+}
